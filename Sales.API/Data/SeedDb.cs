@@ -82,6 +82,16 @@ namespace Sales.API.Data
 
                 await _context.SaveChangesAsync();
             }
+
+            if (!_context.Categories.Any())
+            {
+                _context.Categories.Add(new Category { Name = "Hogar" });
+                _context.Categories.Add(new Category { Name = "tecnologia" });
+                _context.Categories.Add(new Category { Name = "Pisos" });
+                _context.Categories.Add(new Category { Name = "Belleza" });
+                
+                await _context.SaveChangesAsync();
+            }
         }
     }
 }
