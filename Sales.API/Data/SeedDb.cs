@@ -83,13 +83,42 @@ namespace Sales.API.Data
                 await _context.SaveChangesAsync();
             }
 
+       
             if (!_context.Categories.Any())
             {
-                _context.Categories.Add(new Category { Name = "Hogar" });
-                _context.Categories.Add(new Category { Name = "tecnologia" });
-                _context.Categories.Add(new Category { Name = "Pisos" });
-                _context.Categories.Add(new Category { Name = "Belleza" });
-                
+                _context.Categories.Add(new Category { Name = "Hogar y decoración" });
+                _context.Categories.Add(new Category { Name = "Moda y accesorios" });
+                _context.Categories.Add(new Category { Name = "Electrónica y tecnología" });
+                _context.Categories.Add(new Category { Name = "Belleza y cuidado personal" });
+                _context.Categories.Add(new Category { Name = "Juguetes y juegos" });
+                _context.Categories.Add(new Category { Name = "Deportes y aire libre" });
+                _context.Categories.Add(new Category { Name = "Alimentos y bebidas" });
+                _context.Categories.Add(new Category { Name = "Salud y bienestar" });
+                _context.Categories.Add(new Category { Name = "Viajes y turismo" });
+                _context.Categories.Add(new Category { Name = "Artes y manualidades" });
+                _context.Categories.Add(new Category { Name = "Libros y revistas" });
+                _context.Categories.Add(new Category { Name = "Muebles y accesorios" });
+                _context.Categories.Add(new Category { Name = "Herramientas y equipos de construcción" });
+                _context.Categories.Add(new Category { Name = "Joyería y relojes" });
+                _context.Categories.Add(new Category { Name = "Mascotas y accesorios para mascotas" });
+                _context.Categories.Add(new Category { Name = "Instrumentos musicales" });
+                _context.Categories.Add(new Category { Name = "Jardinería y exteriores" });
+                _context.Categories.Add(new Category { Name = "Suministros para oficina y papelería" });
+                _context.Categories.Add(new Category { Name = "Artículos de colección" });
+                _context.Categories.Add(new Category { Name = "Fotografía y videografía" });
+                _context.Categories.Add(new Category { Name = "Cine y televisión" });
+                _context.Categories.Add(new Category { Name = "Equipos médicos y suministros" });
+                _context.Categories.Add(new Category { Name = "Suministros para fiestas y eventos" });
+                _context.Categories.Add(new Category { Name = "Artículos de iluminación" });
+                _context.Categories.Add(new Category { Name = "Suministros de limpieza y organización" });
+                _context.Categories.Add(new Category { Name = "Maletas y accesorios de viaje" });
+                _context.Categories.Add(new Category { Name = "Productos para bebés y niños pequeños" });
+                _context.Categories.Add(new Category { Name = "Productos de limpieza del hogar" });
+                _context.Categories.Add(new Category { Name = "Suministros para la industria alimentaria" });
+                _context.Categories.Add(new Category { Name = "Accesorios para automóviles" });
+                _context.Categories.Add(new Category { Name = "Suministros para construcción y reparación de vehículos" });
+                _context.Categories.Add(new Category { Name = "Ropa de cama y baño" });
+
                 await _context.SaveChangesAsync();
             }
         }
