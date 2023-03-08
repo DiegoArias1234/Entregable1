@@ -27,7 +27,14 @@ namespace Sales.API.Controllers
 
             var queryable = _context.Categories
                 .AsQueryable();
-             return Ok(await queryable
+
+
+            if (!string.IsNullOrWhiteSpace(pagination.Filter))
+            {
+                queryable = queryable.Where(x => x.Name.ToLower().Contains(pagination.Filter.ToLower()));
+            }
+
+            return Ok(await queryable
                  .OrderBy(x => x.Name)
                  .Paginate(pagination)                 
                  .ToListAsync());
@@ -37,6 +44,11 @@ namespace Sales.API.Controllers
         public async Task<ActionResult> GetPages([FromQuery] PaginationDTO pagination)
         {
             var queryable = _context.Categories.AsQueryable();
+            if (!string.IsNullOrWhiteSpace(pagination.Filter))
+            {
+                queryable = queryable.Where(x => x.Name.ToLower().Contains(pagination.Filter.ToLower()));
+            }
+
             double count = await queryable.CountAsync();
             double totalPages = Math.Ceiling(count / pagination.RecordsNumber);
             return Ok(totalPages);
