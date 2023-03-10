@@ -12,7 +12,7 @@ namespace Sales.Shared.DTOs
 
         public int Page { get; set; } = 1;
 
-        public int RecordsNumber { get; set; } = 3;
+        public int RecordsNumber { get; set; } = 6;
 
         public string? Filter { get; set; }
     }
